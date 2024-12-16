@@ -26,8 +26,47 @@ x=["satyendra","Ravi",3,7,"sandhya"]
 
 
 
+Ex-6 copy the element of an array to another array
+a) using for loop
+let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let y = [];
+for (let i = 0; i < x.length; i++) {
+    y[i] = x[i];
+}
+console.log(y);
 
+b) using for in loop
+let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let y = [];
+for (let index in x) {
+    y[index] = x[index];
+}
+console.log(y);
 
+c) using for of loop
+let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let y = [];
+let index = 0;
+for (let item of x) {
+    y[index] = item;
+    index++;
+}
+console.log(y);
+
+d) using forEach loop
+let x=[1,2,3,4,5,6,7,8,9,10]
+let y=[]
+x.forEach((item,index)=>{
+    y[index]=item   
+})
+console.log(y)
+
+e) using map function. map function jo hai wo ek array return karta hai
+let x=[1,2,3,4,5,6,7,8,9,10]
+let y = x.map((item)=>{
+     return item
+})
+console.log(y)
 
 Ex-6 hum kewal chahte hai ki string jitna bhi hai wo kewal filter out hokar ek new array ban jaye. aur undefined ek datatype hai isliye comparision karte samay hum undefined likhenge quotes ke bina
 let x = ["satyendra", "Ravi", 3, 7, "sandhya"];
@@ -38,5 +77,6 @@ let y = x.map((item)=>{
 }).filter((item)=> item !== undefined)
 console.log(y)                                   
 Note- humara jo map function hai wo ek array return karta hai. so isme if lga hai so agar condition match hoga to ye return kar dega aur jiske liye condition match nahi hoga uske liye undefined return karega.
-undefined javascript me ek datatype hai. man lo apne ek variable banaya aur us variable me koi bhi value asign nahi kiya hai
+undefined javascript me ek datatype hai. man lo apne ek variable banaya aur us variable me koi bhi value asign nahi kiya hai to hume undefined milega
+
 
