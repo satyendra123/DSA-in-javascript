@@ -175,3 +175,66 @@ for (let i of x) {
 console.log(occurance)
 o/p- { '2': 2, '3': 2, '4': 1, '5': 2, '6': 1 }
 
+Q. find the max and min value from an array
+let x = [2, 6, 5, 2, 3, 4, 5, 3];
+const max= x.reduce((acc,cur)=>{
+    return acc>cur?acc:cur
+})
+console.log(max)
+
+const min= x.reduce((acc,cur)=>{
+    return acc<cur?acc:cur
+})
+console.log(min)
+
+Q. find the second largest element from an array
+let x = [2, 6, 5, 2, 3, 4, 5, 3];
+
+const max = x.reduce((acc, cur) => (acc > cur ? acc : cur));
+console.log("Largest element:", max);
+
+const secondLargest = x.reduce((acc, cur) => {
+    if (cur < max && cur > acc) {
+        return cur; // Update if cur is smaller than max but larger than current acc
+    }
+    return acc;
+}, -Infinity);
+
+console.log("Second largest element:", secondLargest);
+
+2nd method in c
+let x = [2, 6, 5, 2, 3, 4, 5, 3];
+let max = x[0];
+let second_large = -1
+
+for (let i = 1; i < x.length; i++) {
+    if (x[i] > max) 
+    {
+        second_large = max;
+        max = x[i];
+    } 
+    else if (x[i] > second_large && x[i] !== max) 
+    {
+        second_large = x[i];
+    }
+}
+console.log("Largest element:", max);
+console.log("Second largest element:", second_large);
+
+Q. find the sum of all the elements in an array
+let x = [2, 6, 5, 2, 3, 4, 5, 3];
+let sum=0
+for(i=0;i<x.length;i++)
+{
+    sum=sum+x[i]
+}
+console.log(sum)
+
+2nd method using reduce in javascript
+let x = [2, 6, 5, 2, 3, 4, 5, 3];
+const y= x.reduce((acc,cur)=>{
+        return acc+cur
+})
+console.log(y)
+
+
