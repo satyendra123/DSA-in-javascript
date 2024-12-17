@@ -241,7 +241,7 @@ Q. make the first character of a string in capital letter
 let x = "Hello how are you. when did you come";
 let y = x.split(" ");
 let z = y.map((item) => {
-    return item.charAt(0).toUpperCase() + item.slice(1);
+    return item.charAt(0).toUpperCase() + item.slice(1);     // For example, if item is "hello", item.slice(1) would return "ello" so H+ello so it becomes Hello
 });
 let result = z.join(" ");
 console.log(result);
