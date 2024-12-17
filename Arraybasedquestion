@@ -246,5 +246,48 @@ let z = y.map((item) => {
 let result = z.join(" ");
 console.log(result);
 
-Q. 
+2nd method using c
+let str = "Hello how are you. when did you come";
+let capitalize = true;
+let result = "";
+
+console.log("Original String:", str);
+for (let i = 0; i < str.length; i++) {
+    if (str[i] === ' ') {
+        capitalize = true;
+        result += str[i];
+    } else if (capitalize && str[i].match(/[a-zA-Z]/)) {
+        result += str[i].toUpperCase();
+        capitalize = false;
+    } else {
+        result += str[i];
+    }
+}
+console.log("Modified String:", result);
+
+Q. print the each occurance of character from the string
+let str = "Hello how are you. when did you come";
+
+let charCount = {};
+for (let i = 0; i < str.length; i++) 
+{
+    let char = str[i];
+    if (char !== ' ') 
+  {
+        char = char.toLowerCase();
+        if (charCount[char]) 
+        {
+            charCount[char] += 1; // Increment the count
+        } 
+        else 
+        {
+            charCount[char] = 1; // Initialize the count to 1 if not found
+        }
+    }
+}
+console.log("Character Frequency:");
+for (let char in charCount) {
+    console.log(`${char}: ${charCount[char]}`);
+}
+
 
