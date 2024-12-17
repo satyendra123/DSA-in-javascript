@@ -237,4 +237,14 @@ const y= x.reduce((acc,cur)=>{
 })
 console.log(y)
 
+Q. make the first character of a string in capital letter
+let x = "Hello how are you. when did you come";
+let y = x.split(" ");
+let z = y.map((item) => {
+    return item.charAt(0).toUpperCase() + item.slice(1);
+});
+let result = z.join(" ");
+console.log(result);
+
+Q. 
 
