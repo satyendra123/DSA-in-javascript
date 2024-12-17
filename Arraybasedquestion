@@ -290,4 +290,9 @@ for (let char in charCount) {
     console.log(`${char}: ${charCount[char]}`);
 }
 
-
+Q. reverse the string
+let str = "hello";
+let reversedStr = str.split('').map((char, index, arr) => {
+                 return arr[arr.length - 1 - index]).join('');
+})
+console.log(reversedStr);
