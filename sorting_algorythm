@@ -1,0 +1,19 @@
+Ex-1 isme hum kya karte hai ki jo pahla element hai jaise 20 compare hoga apne aane wale har ek element se to sabse pahle compare karega 10 se so 10 chhota hai means swap kar do. 
+let x = [20, 10, 40, 50, 5];
+
+for (let i = 0; i < x.length; i++) {
+    for (let j = i + 1; j < x.length; j++) {
+        if (x[i] > x[j]) 
+        {
+            let temp = x[i];
+            x[i] = x[j];
+            x[j] = temp;
+        }
+    }
+}
+
+console.log(x); // Output: [5,10, 20, 40, 50]
+
+Note- ye kaise kaaam kar rha hai ki isme actually kya hota hai ki sabse pahle a[0] ks comparision karate hai sabhi element se one by one aur jo chhota hota hai uske sath swap kar dete hai. so 20 ka comparision hua 10 se to 10 chhota hai to then perform swapping. so array it becomes [10,20,40,50,5]
+again j ki value increase hui but i same hi rha means i=0,j=2 means a[0] ka comparision hoga ab a[2] se means 10 ka comparision hoga 40 se so condition false so move ahead now 10 ka comparision hoga 50 se false so move ahead now 10 ka comparision hoga 5 se so here usse chhota mil gya so swap again so [5,20,40,50,10]
+now ab second wale ka comparision hoga sabse kyuki 
