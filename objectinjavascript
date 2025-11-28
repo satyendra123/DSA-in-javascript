@@ -1,1 +1,11 @@
+const data = {
+    "name":"satyendra",
+    "age":27,
+    "address":"jamuna colliery"
+}
 
+for (let key in data){
+    console.log(data[key])
+}
+
+Note- when i write data[key] then it is working but when i write data.key then it will not work. because when i write data.key then it is searching for key object not for the value of key so that is why for the dynamically accessing the object we follow the square bracket not dot notation
