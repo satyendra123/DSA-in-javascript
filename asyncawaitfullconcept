@@ -1,0 +1,33 @@
+using .then() method
+const getRandomNumber= async()=> {
+  await new Promise(r => setTimeout(r, 2000));
+  return Math.floor(Math.random() * 100);
+}
+
+const run = ()=> {
+  console.log("code start");
+  const data = getRandomNumber();
+  
+  data.then((result)=>{
+        console.log("my new data");
+        console.log("Result:", result);
+  })
+}
+
+run();
+
+using async await method
+
+const getRandomNumber= async()=> {
+  await new Promise(r => setTimeout(r, 2000));
+  return Math.floor(Math.random() * 100);
+}
+
+const run = async()=> {
+  console.log("code start");
+  const data = await getRandomNumber();
+  console.log("my new data");
+  console.log("Result:", result);
+}
+
+run();
