@@ -10,6 +10,20 @@ for (let key in data){                                                       for
 
 Note- when i write data[key] then it is working but when i write data.key then it will not work. because when i write data.key then it is searching for key object not for the value of key so that is why for the dynamically accessing the object we follow the square bracket not dot notation
 
+Q. convert objects to arrays                   (ii) arrays to objects
+   d={a:10,b:5,c:15}                            result= [['a',10],['b',5],['c',15]]
+   o/p- [['a',10],['b',5],['c',15]]             d={a:10,b:5,c:15}
+
+d={a:10,b:5,c:15}                               for (let i in result) {
+result=[]                                          let key = result[i][0]
+for (let i in d){                                  let val = result[i][1]
+  result.push([i, d[i]]);                          d[key] = val
+}                                               }
+ 
+console.log(result);                            console.log(d)
+
+
+
 Q. destructuring of the object. means we can simply extract the keys values
 d={a:10,b:5,c:15}
 
