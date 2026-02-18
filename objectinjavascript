@@ -10,27 +10,30 @@ for (let key in data){                                                       for
 
 Note- when i write data[key] then it is working but when i write data.key then it will not work. because when i write data.key then it is searching for key object not for the value of key so that is why for the dynamically accessing the object we follow the square bracket not dot notation
 
+Q. 
+
 Q.1 man lo mere pass ye do dictionary hai aur mujhe in dono dictionary ka union chahiye to mai kaise nikalunga
-d1={a:5,b:10,c:15}                                              Q.2 d1={a:5,b:10,c:15}
-d2={a:15,b:5,d:37}                                                  d2={a:15,b:5,d:37}
+d1={a:5,b:10,c:15}                            Q.2 d1={a:5,b:10,c:15}                    Q.3 d1={a:5,b:10,c:15}
+d2={a:15,b:5,d:37}                                d2={a:15,b:5,d:37}                        d2={a:15,b:5,d:37}
 
-// o/p- {a:5,b:10,c:15,d:37}                                        // o/p- {c:15,d:37}
+// o/p- {a:5,b:10,c:15,d:37}                      // o/p- {c:15,d:37}                       //o/p- {a:20,b:15,c:15,d:37}
 
-d={}                                                                 d={}
-for(let i in d1){                                                    for(let i in d1){
-    if(! i in d){                                                      if (!(i in d2)){
-        d[i]= 0                                                           d[i]= d1[i]
-    }                                                                  }
-    d[i]= d1[i]                                                      }
+d={}                                               d={}                                     d={}
+for(let i in d1){                                  for(let i in d1){                        for(let i in d1){
+    if(! i in d){                                     if (!(i in d2)){                      if (i in d2){
+        d[i]= 0                                            d[i]= d1[i]                        d[i] = d1[i] + d2[i];
+    }                                                    }                                   }
+    d[i]= d1[i]                                     }                                       else{
+}                                                                                             d[i] = d1[i]; 
+                                                                                             }
+                                                                                           }
+for(let j in d2){                                  for(let j in d2){                       for(let j in d2){
+    if(!j in d){                                        if (!(j in d1)){                     if (!(j in d)){
+        d[j]=0                                               d[j]=d2[j]                         d[j]=d2[j]
+    }                                               }                                         }
+    d[j]= d2[j]                                   }                                          }
 }
 
-for(let j in d2){                                                    for(let j in d2){
-    if(!j in d){                                                       if (!(j in d1)){
-        d[j]=0                                                            d[j]=d2[j]
-    }                                                                  }
-    d[j]= d2[j]                                                      }
-}
-
-console.log(d)                                                    console.log(d)
-
+console.log(d)                                   console.log(d)                            console.log(d)
+ 
 Q.2 
