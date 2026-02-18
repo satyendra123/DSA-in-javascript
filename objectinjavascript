@@ -37,7 +37,17 @@ for(let i in d1){
 
 console.log(d)
 
-Q. 
+Q. so isme hum chahte hai ki ek sorted output aaye means pahle sabse chhoti value aaye, phir usse badhi aaye aur phir sabse badhi aaye. 
+   isme hum ek aur chiz sikhte hai ki object ko array me aur array ko objects me kaise convert karte hai
+d={a:10,b:5,c:15}
+o/p- {b:5,a:10,c:15}
+newdata= Object.entries(d)
+sorteddata= newdata.sort((a,b)=>a[1]-b[1])
+console.log(sorteddata)
+const sortedObj = Object.fromEntries(sorteddata);
+
+console.log(sortedObj);
+
 
 Q.1 man lo mere pass ye do dictionary hai aur mujhe in dono dictionary ka union chahiye to mai kaise nikalunga
 d1={a:5,b:10,c:15}                            Q.2 d1={a:5,b:10,c:15}                    Q.3 d1={a:5,b:10,c:15}
