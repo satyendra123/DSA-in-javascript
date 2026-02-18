@@ -14,7 +14,7 @@ last=x.pop()
 console.log(last)               o/p- [5]
 console.log(x)                   o/p- [1,2,3,4]
 
-EX-4 write a program to add a number at the first of the array
+EX-4 write a program to remove a number at the first of the array
 x=[1,2,3,4,5]
 first = x.shift()
 console.log(first)              o/p- [1]
@@ -22,9 +22,9 @@ console.log(x)                   o/p- [2,3,4,5]
 
 Ex-5 loop through all the elements in an array
 x=["satyendra","Ravi",3,7,"sandhya"]
-
-
-
+for (let i in x){
+    console.log(i)
+}
 
 Ex-6 copy the element of an array to another array
 a) using for loop
@@ -79,6 +79,15 @@ console.log(y)
 Note- humara jo map function hai wo ek array return karta hai. so isme if lga hai so agar condition match hoga to ye return kar dega aur jiske liye condition match nahi hoga uske liye undefined return karega.
 undefined javascript me ek datatype hai. man lo apne ek variable banaya aur us variable me koi bhi value asign nahi kiya hai to hume undefined milega
 
+Q. hume do questions diye hue hai aur in dono list me se hume ek dictionary banana hai mapping karke to hum kuch is tarah se us chiz ko solve karenge
+l1=['a','b','c']
+l2=[5,3,2]
+
+d={}
+for(let i=0; i<l1.length;i++){
+    d[l1[i]]=l2[i]
+}
+console.log(d)
 Ex-7 remove the dublicate element from the array (using single array)- make a unique array
 let x = [1, 3, 4, 5, 6, 7, 3];
 let n = x.length;
