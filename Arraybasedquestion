@@ -296,3 +296,22 @@ let reversedStr = str.split('').map((char, index, arr) => {
                  return arr[arr.length - 1 - index]).join('');
 })
 console.log(reversedStr);
+
+Q. so two list se hum dekhte hai ki kaise map karke ek dictionary yaa object bana sakte hai
+l1=['satyendra','sandhya','satyam']
+l2=[156,132,189]
+d={}
+for(let i=0;i<l1.length;i++){
+    key=l1[i]
+    d[key]=l2[i]
+}
+console.log(d)
+
+sorteddata= Object.entries(d).sort((a,b)=>{
+    return a[1]-b[1]
+})
+console.log(sorteddata)
+
+console.log(`smallest is ${sorteddata[0][0]}`)
+console.log(`midium is ${sorteddata[1][0]}`)
+console.log(`large is ${sorteddata[2][0]}`)
