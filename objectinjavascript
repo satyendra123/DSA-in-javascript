@@ -10,6 +10,33 @@ for (let key in data){                                                       for
 
 Note- when i write data[key] then it is working but when i write data.key then it will not work. because when i write data.key then it is searching for key object not for the value of key so that is why for the dynamically accessing the object we follow the square bracket not dot notation
 
+Q. destructuring of the object. means we can simply extract the keys values
+d={a:10,b:5,c:15}
+
+const {a,b,c,d} = d
+console.log(a)
+console.log(b)
+console.log(c)
+
+Note-  it means it internally does the
+const a = d.a
+const b= d.b
+const c= d.c
+
+so with the same name we can use the destructuring method directly so we need not to make the separate variables to store the value. we use the same name
+
+Q. inverting the keys and values in javascript. means making the key as values and values as key
+d1={a:5,b:10,c:15}
+// o/p- {5:a,10:b,15:c}
+d={}
+for(let i in d1){
+    k=i
+    v=d1[i]
+    d[v]=k
+}
+
+console.log(d)
+
 Q. 
 
 Q.1 man lo mere pass ye do dictionary hai aur mujhe in dono dictionary ka union chahiye to mai kaise nikalunga
