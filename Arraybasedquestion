@@ -212,23 +212,43 @@ const secondLargest = x.reduce((acc, cur) => {
 console.log("Second largest element:", secondLargest);
 
 2nd method in c
-let x = [2, 6, 5, 2, 3, 4, 5, 3];
-let max = x[0];
-let second_large = -1
-
-for (let i = 1; i < x.length; i++) {
-    if (x[i] > max) 
-    {
-        second_large = max;
-        max = x[i];
-    } 
-    else if (x[i] > second_large && x[i] !== max) 
-    {
-        second_large = x[i];
+a=[23,45,98,67,45]
+// second largest
+max=a[0]
+secondlargest=0
+for(let i in a){
+    if(a[i]>max){
+        secondlargest=max;
+        max=a[i]
     }
+    else if (a[i] < max && a[i] > secondlargest) {
+    secondlargest = a[i];
+  }
 }
-console.log("Largest element:", max);
-console.log("Second largest element:", second_large);
+console.log(max)
+console.log(secondlargest)
+
+3rd method()
+let a = [23, 45, 98, 67, 45];
+
+let max = a[0];
+
+for (let i in a) {
+  if (a[i] > max) {
+    max = a[i];
+  }
+}
+
+let secondLargest = -Infinity;
+
+for (let i in a) {
+  if (a[i] < max && a[i] > secondLargest) {
+    secondLargest = a[i];
+  }
+}
+
+console.log("Largest:", max);
+console.log("Second Largest:", secondLargest);
 
 Q. find the sum of all the elements in an array
 let x = [2, 6, 5, 2, 3, 4, 5, 3];
