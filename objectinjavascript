@@ -87,4 +87,30 @@ for(let j in d2){                                  for(let j in d2){            
 
 console.log(d)                                   console.log(d)                            console.log(d)
  
-Q.2 
+Q.2 go through the questions one by one and also find the solution
+let names = ["ram", "shyam", "mohan"];
+let marks = [45, 78, 62];
+d={}
+//(i) Create an object like { ram: 45, shyam: 78, mohan: 62 }
+for(let i in names){
+    d[names[i]]=marks[i]
+}
+console.log(d)
+
+//(ii) Print the name of the student who scored the highest marks
+
+let highestMarks;
+let topper = "";
+for (let key in d) {
+  highestMarks = d[key];
+  topper = key;
+  break;
+}
+
+for (let i in d) {
+  if (d[i] > highestMarks) {
+    highestMarks = d[i];
+    topper = i;
+  }
+}
+console.log(topper, highestMarks);
