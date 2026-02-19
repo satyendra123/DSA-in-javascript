@@ -243,7 +243,7 @@ const secondLargest = x.reduce((acc, cur) => {
 console.log("Second largest element:", secondLargest);
 
 2nd method in c
-a=[23,45,98,67,45]
+a=[2, 6, 5, 2, 3, 4, 5, 3]; 
 // second largest
 max=a[0]
 secondlargest=0
@@ -252,12 +252,16 @@ for(let i in a){
         secondlargest=max;
         max=a[i]
     }
-    else if (a[i] < max && a[i] > secondlargest) {
+    else if (a[i] < max && a[i] > secondlargest) {                 // else if(x[i]>secondlarg && x[i] !== max) 
     secondlargest = a[i];
   }
 }
 console.log(max)
 console.log(secondlargest)
+Note- so iska simple sa logic ye hai ki sabse pahle check karo condition so humare case me condition kewal ek bar hi true hua hai 2<6 so yaha humara if block chala aur max me 6 aur secondlarg me 2 aa gya
+      so yaha kewal if block rhta to hume correct data nahi milta so second large ko hum humesa current value of i se bhi compare karte rhenge kya ye value
+ki jo current value hai kya ye x[i]!==max means current value max nahi hai aur ye jo current value hai wo secondlargest se bhi badhi ho agar aisa hota hai to
+hum bol denge ki humari current value hi second largest number hai
 
 3rd method()
 let a = [23, 45, 98, 67, 45];
