@@ -180,22 +180,26 @@ console.log(y)
 
 
 Q. find the occurance of each element of the array. 
-1st method in c
-let x = [2, 6, 5, 2, 3, 4, 5, 3];
-for(let i=0;i<x.length;i++)
-{
-    let cnt=1;
-    for(let j=i+1;j<x.length;j++)
-    {
-        if(x[j]==x[i])
-        {
-            cnt+=1;
-        }
-    }
-    console.log(`Element ${x[i]} comes ${cnt} times`);
-}
+1st method in c                                                       (ii) using arrays x=[2,6,5,2,3,4,5,3]
+let x = [2, 6, 5, 2, 3, 4, 5, 3];                                          o/p- [[2,2],[6,1],[5,2],[3,2],[4,1]]
+for(let i=0;i<x.length;i++)                                                result=[]
+{                                                                          visited = []
+    let cnt=1;                                                             for(let i=0;i<x.length;i++){
+    for(let j=i+1;j<x.length;j++)                                               cnt=1
+    {                                                                           if(visited.includes(x[i])){
+        if(x[j]==x[i])                                                                 continue
+        {                                                                  
+            cnt+=1;                                                         for(let j=i+1;j<x.length;j++){
+        }                                                                       if(x[i]==x[j]){
+    }                                                                              cnt+=1
+    console.log(`Element ${x[i]} comes ${cnt} times`);                             }
+}                                                                             }
+                                                                              result.push([x[i],cnt])
+                                                                              visited.push(x[i])
+                                                                            console.log(`Element ${x[i]} comes ${cnt} times`);
+                                                                            }
 
-2nd method- using objects
+2nd method- using objects                                                    
 Note- ise hum objects ka use karke karenge. check krenge if(occurance[i]) means is key ka value hai ya nahi agr hai to +1 kar do nahi to 1 assign kar do occurance me
 
 let x = [2, 6, 5, 2, 3, 4, 5, 3];
