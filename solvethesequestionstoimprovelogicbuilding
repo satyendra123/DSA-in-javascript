@@ -1,153 +1,75 @@
-🟢 PART 1: Two Lists (Arrays) – Beginner
+PART 1: Two Lists (Arrays) – Beginner
 
 Assume:
-
 let names = ["ram", "shyam", "mohan"];
 let marks = [45, 78, 62];
 
-Create an object like { ram: 45, shyam: 78, mohan: 62 }
+(i)Create an object like { ram: 45, shyam: 78, mohan: 62 }
+(ii) Print the name of the student who scored the highest marks     
+(iii) Print the name of the student who scored the lowest marks
+(iv) Print all students who scored more than 60 o/p- 
+(v) Find the average marks
+(vi) Sort students by marks (ascending)
+(vii) Sort students by marks (descending) 
+(viii) Print output like: ram scored 45, shyam scored 78, mohan scored 62
+(ix) Count how many students passed (marks ≥ 50) o/p- count=2
+(x) Create a new array of only marks greater than 50  o/p- {shyam:78, mohan:62}
 
-Print the name of the student who scored the highest marks
-
-Print the name of the student who scored the lowest marks
-
-Print all students who scored more than 60
-
-Find the average marks
-
-Sort students by marks (ascending)
-
-Sort students by marks (descending)
-
-Print output like:
-
-ram scored 45
-shyam scored 78
-mohan scored 62
-
-Count how many students passed (marks ≥ 50)
-
-Create a new array of only marks greater than 50
-
-🟡 PART 2: Two Lists – Tricky Logic
+PART 2: Two Lists – Tricky Logic
 
 Assume:
-
 let l1 = ["a", "b", "c", "d"];
 let l2 = [10, 20, 30, 40];
 
-Create an object using a loop
+(i) Create an object using a loop   o/p- {a:10,b:20,c:30,d:40}
+(ii) Find the sum of all values     o/p- sum=100
+(iii) Remove the key "c" from the object o/p- {a:10,b:20,d:40}
+(iv) Increase every value by 5      o/p- {a:15,b:25,c:35,d:45}
+(v) Convert the object back to two arrays  o/p- l1=[a,b,c,d], l2=[15,25,35,45]
+(vi) Swap keys and values o/p-  {10:"a",20:"b",30:c,40:d}
+(vii)Find the key whose value is 30   o/p- c
+(viii) Check if value 25 exists       o/p- false
+(ix) Create a new object with only even values {a:10,b:20,d:40]
+(x) Multiply all values by 2   o/p- {a:20,b:40,d:80}
 
-Find the sum of all values
-
-Remove the key "c" from the object
-
-Increase every value by 5
-
-Convert the object back to two arrays
-
-Swap keys and values → {10:"a",20:"b",...}
-
-Find the key whose value is 30
-
-Check if value 25 exists
-
-Create a new object with only even values
-
-Multiply all values by 2
-
-🔵 PART 3: Two Dictionaries (Objects) – Beginner
+PART 3: Two Dictionaries (Objects) – Beginner
 
 Assume:
-
 let d1 = { a: 10, b: 20, c: 30 };
 let d2 = { b: 5, c: 15, d: 25 };
 
-Find common keys
+(i) Find common keys
+(ii) Find keys present only in d1
+(iii) Find keys present only in d2
+(iv) Merge both objects
+(v) For common keys, add their values Output: { a:10, b:25, c:45, d:25 }
+(vi) Find the total sum of all values
+(vii) Count total number of keys
+(viii) Find the key with maximum value
+(ix) Find the key with minimum value
+(x) Convert object to array of [key, value]
 
-Find keys present only in d1
+PART 4: Two Dictionaries – Tricky / Interview Level
 
-Find keys present only in d2
+let d1 = { a: 10, b: 20, c: 30 };
+let d2 = { b: 25, c: 15, d: 25 };
 
-Merge both objects
-
-For common keys, add their values
-Output: { a:10, b:25, c:45, d:25 }
-
-Find the total sum of all values
-
-Count total number of keys
-
-Find the key with maximum value
-
-Find the key with minimum value
-
-Convert object to array of [key, value]
-
-🟠 PART 4: Two Dictionaries – Tricky / Interview Level
-
-Using same d1 and d2:
-
-Create intersection object (only common keys with summed values)
-
-Create union object (all keys, sum if common)
-
-Create difference object (d1 - d2)
-
-Create symmetric difference object
-
-Sort object by values
-
-Check if both objects are equal
-
-Find duplicate values across both objects
-
-Multiply values of d1 by corresponding values of d2 (common keys only)
-
-Create an array of keys whose value > 20
-
-Remove keys whose value < 15
-
-🔴 PART 5: Very Tricky (Think Like a Developer)
-
-Merge two objects without using Object.assign()
-
-Deep copy an object manually
-
-Count frequency of values in an object
-
-Reverse an object (keys ↔ values)
-
-Convert object into sorted array and back to object
-
-Find the second highest value
-
-Group keys by even and odd values
-
-Find missing keys between two objects
-
-Update object values using another object as reference
-
-Validate if an object has duplicate values
-
-🧠 BONUS CHALLENGES (🔥 Real Confidence Builders)
-
-Given two arrays, create an object and auto-sort while inserting
-
-Solve without using Object.keys()
-
-Solve using only for...in
-
-Solve using only for loop
-
-Solve using reduce()
-
-Solve using map + filter
-
-One-liner solution
-
-Time-complexity optimized solution
-
-Memory-optimized solution
-
-Dry-run the code and explain each step
+(i) find the union with min values o/p- {a:10,b:20,c:15,d:25}
+(iI) find the union with max values o/p- {a:10,b:25,c:30,d:25}
+(iii) Create intersection object (only common keys with summed values) o/p- {b:45,c:45}
+(iv) Create union object (all keys, sum if common) o/p- {a:10,b:45,c:45,d:25}
+(v) Create difference object (d1 - d2)
+(vi) Create symmetric difference object
+(vii) Sort object by values
+(viii) Check if both objects are equal
+(ix) Find duplicate values across both objects 
+(x) Multiply values of d1 by corresponding values of d2 (common keys only) o/p- {b:500,c:450}
+(xi) Create an array of keys whose value > 20  o/p- [b,c,d]
+(xii )Remove keys whose value < 15
+(xiii) Group keys by even and odd values  o/p- { even: ["a", "b", "c"], odd: ["b", "c", "d"]}
+(ix) Find missing keys between two objects  o/p- { missingInD1: ["d"], missingInD2: ["a"]}
+(x) Validate if an object has duplicate values  o/p- {d1: false,d2: true}
+Validate duplicate values
+for thinking
+d1 → values: [10, 20, 30] → all unique ❌ no duplicates
+d2 → values: [25, 15, 25] → 25 appears twice ✅ duplicate exists
