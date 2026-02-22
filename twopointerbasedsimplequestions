@@ -1,0 +1,22 @@
+Q1 to check whether the array is palindrome or not. 
+a= [1,4,3,4,1]                                                       (II) a= "jahan"
+let i=0,j=a.length-1                                                      let i=0,j=a.length-1
+palindrome=true;                                                          palindrome=true;
+while(i<a.length/2)                                                       while(i<a.length/2)
+{                                                                         {
+    if(a[i]!=a[j]){                                                         if(a[i]!=a[j]){
+        palindrome=false                                                    palindrome=false
+        break;                                                              break;
+    }                                                                       }
+    i++;                                                                   i++;
+    j--                                                                    j--
+}                                                                         }
+
+if(palindrome){                                                          if(palindrome){
+    console.log("array is palindrome")                                     console.log("array is palindrome")
+}                                                                        }
+else{                                                                    else{
+    console.log("array is not palindrome")                                 console.log("array is not palindrome")
+}                                                                        }
+
+Q.2 
