@@ -22,3 +22,22 @@ else{                                                                    else{  
 second method- so isme humne pahle apne array ya string ko split kiya jisse ki wo ek array me convert ho gya usme bad hum usme reverse laga sakte hai kyuki ye list ka default function hai aur phir hum use join kar liye aur compare kar liye aur condition lgakar check kar liye
               let a = "12325";
               console.log(a === a.split("").reverse().join("") ? "palindrome" : "not palindrome");
+
+Q.2 reverse the world
+    s="hello how are you"
+    o/p- "you are how hello"
+
+s="hello how are you"
+new_data=s.split(" ")
+
+i=0;
+j=new_data.length-1
+
+while(i<j){
+        temp  = new_data[i]
+        new_data[i] = new_data[j]
+        new_data[j] = temp
+        i++
+        j--
+}
+console.log(new_data.join(" "))
