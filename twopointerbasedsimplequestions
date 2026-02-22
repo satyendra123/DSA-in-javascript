@@ -41,3 +41,24 @@ while(i<j){
         j--
 }
 console.log(new_data.join(" "))
+
+note- so agar split function nahi hota tb hum kaise pure string ko spaces ke based par ek array me convert karte to uske liye humne code likha hai
+let s = "hello how are you";
+let new_data = [];
+let word = "";
+
+for (let i = 0; i < s.length; i++) {
+    if (s[i] === " ") {
+        new_data.push(word);
+        word = "";
+    }
+    else {
+        word += s[i];
+    }
+}
+
+if (word !== "") {
+    new_data.push(word);
+}
+
+console.log(new_data);
