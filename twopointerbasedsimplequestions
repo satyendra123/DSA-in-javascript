@@ -19,4 +19,6 @@ else{                                                                    else{  
     console.log("array is not palindrome")                                 console.log("array is not palindrome")               console.log("array is not palindrome")
 }                                                                        }                                                     }
 
-Q.2 
+second method- so isme humne pahle apne array ya string ko split kiya jisse ki wo ek array me convert ho gya usme bad hum usme reverse laga sakte hai kyuki ye list ka default function hai aur phir hum use join kar liye aur compare kar liye aur condition lgakar check kar liye
+              let a = "12325";
+              console.log(a === a.split("").reverse().join("") ? "palindrome" : "not palindrome");
